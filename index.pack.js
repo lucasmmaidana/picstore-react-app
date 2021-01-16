@@ -3061,7 +3061,7 @@ exports.default = CartItem;
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _react = __webpack_require__(1);
@@ -3075,28 +3075,32 @@ var _Context = __webpack_require__(2);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Header() {
-    var _useContext = (0, _react.useContext)(_Context.Context),
-        cartItems = _useContext.cartItems;
+  var _useContext = (0, _react.useContext)(_Context.Context),
+      cartItems = _useContext.cartItems;
 
-    var cartClassName = cartItems.length > 0 ? "ri-shopping-cart-fill" : "ri-shopping-cart-line";
-    return _react2.default.createElement(
-        "header",
-        null,
+  var cartClassName = cartItems.length > 0 ? "ri-shopping-cart-fill" : "ri-shopping-cart-line";
+  return _react2.default.createElement(
+    "header",
+    null,
+    _react2.default.createElement(
+      "div",
+      { className: "header-content" },
+      _react2.default.createElement(
+        _reactRouterDom.Link,
+        { to: "/" },
         _react2.default.createElement(
-            _reactRouterDom.Link,
-            { to: "/" },
-            _react2.default.createElement(
-                "h2",
-                null,
-                "Pic Some"
-            )
-        ),
-        _react2.default.createElement(
-            _reactRouterDom.Link,
-            { to: "/cart" },
-            _react2.default.createElement("i", { className: cartClassName + " ri-fw ri-2x" })
+          "h2",
+          null,
+          "PicStore"
         )
-    );
+      ),
+      _react2.default.createElement(
+        _reactRouterDom.Link,
+        { to: "/cart" },
+        _react2.default.createElement("i", { className: cartClassName + " ri-fw ri-2x" })
+      )
+    )
+  );
 }
 
 exports.default = Header;
